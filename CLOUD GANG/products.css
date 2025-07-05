@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Indie+Flower&family=Kalam&family=Kosugi+Maru&family=Permanent+Marker&family=Roboto&family=Ubuntu+Condensed&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', cursive;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 2rem 9%;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    border: 2px solid lightslategray;
+    font-weight: bolder;
+    font-size: 1.7em;
+    color: burlywood;
+    cursor: pointer;
+    background: darkslategrey;
+    padding: .8rem 3rem;
+}
+.btn:hover{
+    background: lightslategray;
+}
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(80deg, cyan, lightblue, powderblue, skyblue);
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+header .logo{
+   width: 100px;
+    mix-blend-mode: darken;
+}
+header .navbar a{
+    font-size: 1.7rem;
+    color: darkslategray;
+    margin: 0 1rem;
+    transition: .50s ease;
+}
+header .navbar a:hover{
+    color: burlywood;
+}
+header .icons i{
+    font-size: 2.5rem;
+    color: darkslategray;
+    margin-left: 1rem;
+    transition: .50s ease;
+}
+header .icons i:hover{
+    color: burlywood;
+}
+#menu{
+    font-size: 2.5rem;
+    padding: 1.5rem .5rem;
+    border: .2rem solid darkslategrey;
+    color: burlywood;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    padding: 0;
+    position: relative;
+}
+.home .container .slide{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 9%;
+    padding-top: 9rem;
+}
+.home .container .slide .content{
+    flex: 1 1 40rem;
+    animation: slidecontent .5s linear 1s backwards;
+}
+@keyframes slidecontent{
+    0%{
+        opacity: 0;
+        transform: rotate(-35deg);
+    }
+
+}
+.home .container .slide .image{
+    flex: 1 1 50rem;
+    padding-bottom: 15rem;
+    position: relative;
+    z-index: 0;
+}
+.home .container .slide .image .hood{
+   width: 70%;
+  margin-top: 80px;
+  animation: hood .5s linear;
+}
+@keyframes hood{
+    0%{
+        transform: scale(.2);
+    }
+}
+.home .container .slide .image .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    z-index: -1;
+    animation: text .5s backwards;
+}
+@keyframes text{
+    0%{
+        opacity: 0;
+        top: -10rem;
+    }
+}
+.home .container .slide .content span{
+    font-size: 2rem;
+    color: darkslategrey;
+}
+.home .container .slide .content h3{
+    font-size: 5rem;
+    color: peachpuff;
+    text-shadow: 1px 1px 3px black;
+}
+.home .container .slide .content p{
+   font-size: 1.7em;
+   color: darkslategray;
+   padding: 5rem 0;
+}
+.home .container:nth-child(1) .slide{
+      background: lightsalmon;
+}
+.home .container:nth-child(2) .slide{
+    background: rgb(250, 250, 143);
+}
+.home .container:nth-child(3) .slide{
+    background: lightpink;
+}
+.home .container:nth-child(4) .slide{
+    background: rgb(255, 215, 162);
+}
+.home .container:nth-child(5) .slide{
+    background: lightslategray;
+}
+.home .container{
+    display: none;
+}
+.home .container.active{
+    display: block;
+}
+.home #prev, .home #next{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    z-index: 100;
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: darkslategray;
+    border: .2rem solid lightslategray;
+    cursor: pointer;
+    text-align: center;
+    
+}
+.home #prev:hover, .home #next:hover{
+   color: burlywood;
+   background: darkslategray;
+}
+.home #prev{
+   left: 3rem;
+}
+.home #next{
+    right: 3rem;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: darksalmon;
+    padding: 1rem;
+}
+.head span{
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: darkslategray;
+}
+.products .boxpro{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.products .boxpro .box{
+    border: 1px solid darkslategrey;
+    border-radius: .5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: whitesmoke;
+    flex: 1 1 30rem;
+}
+.products .boxpro .box .content{
+  padding: 1.5rem;
+}
+.products .boxpro .box  img{
+    max-width: 300px;
+    mix-blend-mode:darken;
+    transition: ease .5s;
+    margin: 8rem 2rem;
+}
+.products .boxpro .box:hover img{
+     transform: scale(1.09);
+} 
+.products .boxpro .box .icons{
+   display: flex;
+   flex-flow: column;
+   position: absolute;
+   top: .5rem;
+   left: -10rem;
+}
+.products .boxpro .box:hover .icons{
+    left: 1rem;
+    
+} 
+.products .boxpro .box .icons i{
+   height: 4.5rem;
+   width: 5rem;
+   line-height: 4.5rem;
+   font-size: 2rem;
+   color: darkslategrey;
+   border: .1rem solid lightsalmon;
+   border-radius: .5rem;
+   background: lightsalmon;
+   margin-top: .5rem;
+}
+.products .boxpro .box .icons i:hover{
+    background: lightslategrey;
+    color: burlywood;
+}
+.products .boxpro .box .content h3{
+    color: black;
+    font-size: 2.5rem;
+    font-family: 'Kanit', cursive;
+}
+.products .boxpro .box .content .price{
+   color: gray;
+   font-size: 2.5rem;
+   font-weight: bolder;
+}
+
+.products .boxpro .box .content .price span{
+  color: lightsalmon;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+.products .boxpro .box .content .stars{
+    padding-bottom:1rem ;
+
+}
+.products .boxpro .box .content .stars i{
+    font-size: 1.7rem;
+    color: lightsalmon;
+
+}
+.features .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border: .1rem solid darkslategray;
+  border-radius: .5rem;
+  background: whitesmoke;
+  padding: 2rem;
+  align-items: center;
+  margin: 1.5rem 0;
+  
+}
+.features .row .content{
+    flex: 1 1 40rem;
+}
+.features .row .image-container{
+    display: flex;
+    gap: 1.5rem;
+    flex: 1 1 50rem;
+    align-items: center;
+}
+.features .row .image-container .small{
+     width: 20%;
+}
+.features .row .image-container .big{
+    width: 80%;
+    padding: 1rem;
+}
+.features .row .image-container .small img{
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid darkslategrey;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.features .row .image-container .small img:hover{
+   transform: scale(1.09);
+}
+.features .row .image-container .big img{
+   width: 100%;
+   transition: .5s ease;
+}
+.features .row .image-container .big img:hover{
+    transform: scale(1.10);
+} 
+.features .row .content h3{
+    font-size: 2.5rem;
+    color: lightsalmon;
+}
+.features .row .content .stars i{
+    font-size: 1.7rem;
+    color: lightsalmon;
+    padding: .5rem 0;
+}
+.features .row .content p{
+    font-size: 1.5rem;
+    color: grey;
+    padding: 1rem 0;
+}
+.features .row .content .price{
+    font-size: 2.5rem;
+    color: grey;
+    font-weight: bolder;
+
+}
+.features .row .content .price span{
+    font-size: 1.5rem;
+    color: lightsalmon;
+    text-decoration: line-through;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+    background: linear-gradient(50deg, rgb(133, 214, 241), rgb(98, 211, 255), rgb(84, 231, 250), cyan);
+}
+footer .contain{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .contain .about{
+    margin-right: 30px;
+}
+footer .contain .about.a1{
+    width: 40%;
+    font-size: 16px;
+}
+footer .contain h2{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+footer .contain  h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background: darkslategrey;
+}
+footer  p{
+    color: cadetblue;
+    
+}
+.social{
+  margin-top: 20px;
+  display: flex;
+}
+.social li a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: lightslategrey;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: .5s ease;
+}
+.social li a:hover{
+    transform: translate(1.09);
+    background: powderblue;
+}
+.social li a .bx{
+    color: darkslategray;
+    font-size: 35px;
+    align-items: center;
+}
+.links{
+    position: relative;
+    width: 25%;
+
+}
+.links ul li a{
+    color: cadetblue;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: .5s ease;
+    font-size: 20px;
+}
+.links ul li a:hover{
+    color: antiquewhite;
+}
+.contact{
+    width: calc(35% - 60px);
+    margin-right:0 !important ;
+}
+.contact .info{
+    position: relative;
+
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+    color: lightslategray;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.contact .info li span {
+    color: cadetblue;
+    font-size: 25px;
+}
+.contact .info li a{
+    color: cadetblue;
+    font-size: 20px;
+}
+.copy{
+    width: 100%;
+    background-color: skyblue;
+    padding: 8px 100px;
+    text-align: center;
+    column-rule: cadetblue;
+    top: 100px;
+}
+.copy p{
+    font-size: 16px;
+    font-family: 'Kanit', cursive;
+}
+/*end of footer*/
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and  (max-width: 991px) {
+    html{
+        font-size:55%;
+      
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+
+@media screen and  (max-width: 756px) {
+    #menu{
+        display: block;
+        font-size: 35px;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        width: 100%;
+        background: lightcyan;
+        border-top: .1rem solid rgba(0, 0, 0,.1);
+    }
+    header .navbar.active{
+        left: 0;
+    }
+    header .navbar a{
+        font-size: 2rem;
+        color: burlywood;
+        background: lightslategray;
+        border: .1rem solid darkslategrey;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        display: block;
+        text-align: center;
+    }
+     .home .container .slide .image .text{
+     width: 60%;
+     }
+     .home #prev, .home #next{
+        top: 85%;
+     }
+     footer{
+        padding: 40px;
+    }
+    footer .contain{
+        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .contain .about.a1, .links, .contact{
+        width: 100%;
+    }
+    .copy{
+        width: 100%;
+        background: darkcyan;
+        padding: 8px 40px;
+        text-align: center;
+        color: black;
+    }
+   
+} 
+
+@media screen and  (max-width: 400px) {
+    html{
+        font-size:50%;
+      
+    }
+    .home .container .slide .image{
+        padding-bottom: 6rem;
+        align-items: center;
+    }
+    .head{
+        font-size: 3rem;
+
+    }
+}

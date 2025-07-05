@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Indie+Flower&family=Kalam&family=Kosugi+Maru&family=Permanent+Marker&family=Roboto&family=Ubuntu+Condensed&display=swap');
+
+*{
+   text-decoration: none;
+   margin: 0;
+   list-style: none;
+   border: none;
+   box-sizing: border-box;
+   padding: 0;
+   font-family: 'Roboto', cursive;
+
+}
+main{
+    color: darksalmon;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 1px 3px 3px black;
+}
+main::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, .2);
+}
+h1{
+    margin: 0.3em;
+    font-size: 3em;
+}
+h2{
+    margin-bottom: 0.5em;
+}
+.title{
+    text-align: center;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.404), rgba(173, 216, 230, 0.397), rgba(176, 224, 230, 0.397), rgba(0, 255, 255, 0.404), rgba(135, 207, 235, 0.404));
+    padding: 2em;
+    position: relative;
+
+}
+.title h3{
+    margin: 1em 0;
+
+}
+.title p{
+    color: lightslategray;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-family: 'Permanent Marker', cursive;
+}
+.timeline{
+    margin: 5em auto;
+    max-width: 34.15em;
+}
+.line{
+   position: absolute;
+   top: 50%;
+   width: 4px;
+   height: 100%;
+   background: darksalmon;
+}
+.checkpoint{
+    height: 30em;
+    max-width: 34em;
+    padding: 6em 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.images img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+.checkpoint .text{
+    border: 1px solid lightslategray;
+    border-radius: 1em;
+    padding: 2em;
+    background: rgba(173, 216, 230, 0.397);
+}
+.checkpoint p{
+    line-height: 27px;
+    color: darkgoldenrod;
+}
+.checkpoint:nth-child(odd){
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+.checkpoint:nth-child(even){
+    padding-right: 3em;
+    transform: translateX(-17em);
+}
+.checkpoint:nth-child(odd) .text::before,
+.checkpoint:nth-child(even) .text::before{
+    content: '';
+    background: darksalmon;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.checkpoint:nth-child(odd) .text::before{
+    left: -3em;
+}
+.checkpoint:nth-child(even) .text::before{
+     right: -3em;
+} 
+.checkpoint:nth-child(odd) .line{
+    left: -2px;
+}
+.checkpoint:nth-child(even) .line{
+   right: -2px;
+}
+.checkpoint:nth-child(odd) .text::after,
+.checkpoint:nth-child(even) .text::after{
+    content: '';
+    background-color: lightsalmon;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 50%;
+    transform:  translateY(-50%);
+   
+}
+.checkpoint:nth-child(odd) .text::after{
+   left: -57px;
+}
+.checkpoint:nth-child(even) .text::after{
+   right: -57px;
+}
+
+@media screen and (max-width: 1150px) {
+    .timeline{
+        width: 80vw;
+    }
+    .timeline .checkpoint{
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+    .timeline .checkpoint .line{
+        right: initial;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline .checkpoint .text::before{
+        width: 3px;
+        height: 4em;
+        top: -4em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline .checkpoint .text::after{
+        top: -4.5em;
+        left: -50%;
+        transform: translateX(-50%);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+    background: linear-gradient(50deg, rgb(133, 214, 241), rgb(98, 211, 255), rgb(84, 231, 250), cyan);
+}
+footer .contain{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .contain .about{
+    margin-right: 30px;
+}
+footer .contain .about.a1{
+    width: 40%;
+}
+footer .contain h2{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .contain  h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background: darkslategrey;
+}
+footer  p{
+    color: cadetblue;
+    
+}
+.social{
+  margin-top: 20px;
+  display: flex;
+}
+.social li a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: lightslategrey;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: .5s ease;
+}
+.social li a:hover{
+    transform: translate(1.09);
+    background: powderblue;
+}
+.social li a .bx{
+    color: darkslategray;
+    font-size: 30px;
+    align-items: center;
+}
+.links{
+    position: relative;
+    width: 25%;
+
+}
+.links ul li a{
+    color: cadetblue;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: .5s ease;
+}
+.links ul li a:hover{
+    color: antiquewhite;
+}
+.contact{
+    width: calc(35% - 60px);
+    margin-right:0 !important ;
+}
+.contact .info{
+    position: relative;
+
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+    color: lightslategray;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.contact .info li span {
+    color: cadetblue;
+}
+.contact .info li a{
+    color: cadetblue ;
+}
+.copy{
+    width: 100%;
+    background-color: skyblue;
+    padding: 8px 100px;
+    text-align: center;
+    column-rule: cadetblue;
+    top: 100px;
+}
+/*end of footer*/
+
+
+@media (max-width: 780px){
+   
+     /*footer*/
+     footer{
+        padding: 40px;
+    }
+    footer .contain{
+        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .contain .about.a1, .links, .contact{
+        width: 100%;
+    }
+    .copy{
+        width: 100%;
+        background: darkcyan;
+        padding: 8px 40px;
+        text-align: center;
+        color: black;
+    }
+
+   
+
+}
+
+

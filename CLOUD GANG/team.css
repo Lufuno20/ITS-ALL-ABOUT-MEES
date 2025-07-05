@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Indie+Flower&family=Kalam&family=Kosugi+Maru&family=Permanent+Marker&family=Roboto&family=Ubuntu+Condensed&display=swap');
+
+*{
+   text-decoration: none;
+   margin: 0;
+   list-style: none;
+   border: none;
+   box-sizing: border-box;
+   padding: 0;
+   font-family: 'Roboto', cursive;
+
+}
+body{
+    background: linear-gradient(50deg, cyan, skyblue, powderblue, cyan,lightblue);
+}
+.team{
+    padding: 50px 0;
+    height: 100vh;
+    
+}
+.container{
+    width: 80%;
+   margin: 50px auto;
+}
+.row{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+.row h1{
+    color: lightsalmon;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    font-family: 'Kanit',cursive;
+}
+.row p{
+    margin: 20px 0 0;
+    color: darkslategray;
+    padding-left: 20px;
+    border-left: 5px solid lightsalmon;
+}
+.r2{
+    margin-top: 50px;
+}
+.row .column{
+    margin: 0 10px;
+    position: relative;
+    width: calc(25% - 20px);
+    min-height: 250px;
+    background: lightslategray;
+    float: left;
+}
+.row.column::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+.row .column .imgbox{
+    position: relative;
+}
+.row .column .imgbox img{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.row .column:hover .imgbox img{
+transform: scale(1.09);
+}
+.row .column .details{
+    position: absolute;
+    bottom: -85px;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.295);
+    width: 100%;
+    transition: .5s ease;
+}
+.row .column:hover .details{
+    bottom: 0;
+}
+
+.row .column .details h3{
+    margin: 0;
+    padding:0;
+    color: darksalmon;
+    font-weight: 500;
+    text-align: right;
+    text-transform: uppercase;
+}
+.row .column .details h3 span{
+    font-size: 14px;
+    color: darkslategray;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    top: -6px;
+}
+.row .column .details ul{
+    display: flex;
+    float: right;
+}
+.row .column .details ul {
+     padding: 0 10px;
+     color: darksalmon;
+     font-size: 20px;
+}
+.row .column .details ul  i {
+     transition: .5s;
+}
+.row .column .details ul i:hover {
+    transform: scale(1.09);
+    color: darkslategray;
+}
+
+
+
