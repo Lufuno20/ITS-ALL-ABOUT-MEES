@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="about.css">
+  </head>
+  <body>
+    <!--header section-->
+    <div class="hero">
+      <div class="container">
+        <p>Home / <span>About</span></p>
+        <h1>Why Choose Careers.</h1>
+        <p>Choose your <i>own</i> path. Explore yourself and develop skills.</p>
+        <a href="#positions" class="position-btn">Pick your career.</a>
+      </div>
+    </div>
+    <!--header section end-->
+
+    <!--benefits section-->
+    <section class="benefits-container">
+      <h1>Skills to Develop</h1>
+      <div class="row">
+        <!--copy benefits-->
+        <div class="benefits">
+          <i class="fa-solid fa-file-lines"></i>
+          <h2>CV / Resume</h2>
+          <p>Learn to create a CV / Resume for a job application.</p>
+        </div>
+
+        <div class="benefits">
+          <i class="fa-solid fa-user-plus"></i>
+          <h2>Devlop Skills</h2>
+          <p>
+            Develop skills that you want to learn. It is beneficial to know what
+            your skills are in order to fit the job description.
+          </p>
+        </div>
+
+        <div class="benefits">
+          <i class="fa-brands fa-linkedin"></i>
+          <h2>Job search</h2>
+          <p>
+            improve your resume / cv, LindedIn profile, stand out from the
+            crowd.
+          </p>
+        </div>
+
+        <div class="benefits">
+          <i class="fa-solid fa-arrows-spin"></i>
+          <h2>Career Transition</h2>
+          <p>smoothly switch industries with expert planning.</p>
+        </div>
+
+        <div class="benefits">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h2>Access to resources and tools</h2>
+          <p>use assesments, job search and tools to support your journey.</p>
+        </div>
+      </div>
+    </section>
+    <!--benefits section end-->
+
+    <!--team section-->
+    <div class="teams">
+      <h2>Hear what our team say</h2>
+      <!--copy teams here-->
+      <div class="teams-container active" id="team-1">
+        <img src="./images/susan chang.jfif" alt="" height="100%" />
+        <div class="teams-content">
+          <h3>"We have a creative space to develop skills."</h3>
+          <p>
+            we learn that being creative and having a vision makes a perfect
+            combo for people who think outside the box.<br />
+            <strong>Susan Chang</strong><br />
+            <span>Career Counsellor</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="teams-container" id="team-2">
+        <img src="./images/john smith.jfif" alt="" />
+        <div class="teams-content">
+          <h3>"movtivation gives confidence to our clients / students"</h3>
+          <p>
+            we motivate and encourage students to work hard and put in effort in
+            what they want to pursue. <br />
+            <strong>John Smith</strong><br />
+            <span>Consultant</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="teams-container" id="team-3">
+        <img src="./images/sarah williams.jfif" alt="" />
+        <div class="teams-content">
+          <h3>"Incredible Leadership"</h3>
+          <p>
+            these clients have shown us what it takes to be a leader and how to
+            lead. This shows thatb they would make a good leader in the work
+            space one day. <br />
+            <strong>Sarah Wiiliams</strong><br />
+            <span>Consultant</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="user-list">
+        <!---copy users here and change target name-->
+        <div class="users active" data-target="team-1">
+          <img src="./images/susan chang.jfif" alt="" height="100%" />
+          <p>Susan Chang<br /><span>Career Counsellor</span></p>
+        </div>
+
+        <div class="users" data-target="team-2">
+          <img src="./images/john smith.jfif" alt="" />
+          <p>John Smith<br /><span>Consultant</span></p>
+        </div>
+
+        <div class="users" data-target="team-3">
+          <img src="./images/sarah williams.jfif" alt="" />
+          <p>Sarah Wiiliams<br /><span>Consultant</span></p>
+        </div>
+      </div>
+    </div>
+    <!--team section end-->
+
+    <!--positions section-->
+    <section class="positions" id="positions">
+      <h2>Current Openings</h2>
+
+      <div class="filter-buttons">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="Market">Market</button>
+        <button data-filter="technology">Information Technology</button>
+        <button data-filter="finance">Finance</button>
+        <button data-filter="others">Others</button>
+      </div>
+
+      <div class="position-container">
+        <!--copy the card section-->
+        <div class="job-card" data-filter="Market">
+          <i class="fa-solid fa-money-bill-trend-up"></i>
+          <h3>Marketing Specialist</h3>
+          <p>
+            responsible for creating advertising campanies, pricing strategies
+            and targeting the demographic data of their target audience.
+          </p>
+          <p><strong>Full Time | Sandton</strong></p>
+          <button class="arrow">>>></button>
+        </div>
+
+        <div class="job-card" data-filter="Market">
+          <i class="fa-solid fa-bullhorn"></i>
+          <h3>Social Media Manager</h3>
+          <p>
+            responsible for a brand's online presence, including creating and
+            managing content, engaging with audiences and developing strategies
+            to increase visibiliy.
+          </p>
+          <p><strong>Remote | Rosebank</strong></p>
+          <button class="arrow">>>></button>
+        </div>
+
+        <div class="job-card" data-filter="technology">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Computer Science</h3>
+          <p>
+            focuses on the development and testing of software and software
+            systems.
+          </p>
+          <p><strong>Remote / Full-Time | Pretoria</strong></p>
+          <button class="arrow">>>></button>
+        </div>
+
+        <div class="job-card" data-filter="finance">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Accountant</h3>
+          <p>
+            anaylze finance records to ensure that they are accurate and comply
+            with laws and regulations. they help businesses make critical
+            finacial decisions.
+          </p>
+          <p><strong>Full-Time | Johannesburg</strong></p>
+          <button class="arrow">>>></button>
+        </div>
+      </div>
+      <!--copy the listings-->
+    </section>
+    <!--positions section end-->
+
+    <!--assistance section-->
+    <div class="assistance">
+      <h2>Need any assistance?</h2>
+      <p>
+        If you need any help or struggling to a head start. We are here to help
+        you.
+      </p>
+      <div class="assistance-button">
+        <button>Get in touch >></button>
+        <button>Take a Quiz</button>
+      </div>
+    </div>
+    <br>
+    <!--assistance section end-->
+
+    <!----footer section-->
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column brand">
+  <img src="logo.png" alt="Logo" class="footer-logo" />
+
+  <address>
+    321 Lorem Ipsum Street<br />
+    Suite 400<br />
+    Johannesburg, GA 1917<br />
+    <br>
+    <a href="tel:0987654321">Phone: (+27)98-765-4321</a><br />
+    <a href="mailto:info@example.com">Email: careers@gmail.com</a>
+  </address>
+</div>
+
+
+    <div class="footer-column">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="Home Page.html">Home</a></li>
+        <li><a href="Interviews.html">Interviews</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>More</h4>
+      <ul>
+        <li><a href="#">Landing Pages</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#">create a CV</a></li>
+        <li><a href="#">Job description</a></li>
+        <li><a href="#">locations</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="socials">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Careers. All Rights Reserved. <br>Created by: <a href="https://github.com/Lufuno20?tab=repositories">Lufuno Dagada</a></p>
+    <div class="footer-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+    <!----footer section end-->
+
+    <script>
+      const users = document.querySelectorAll(".users");
+      const teams = document.querySelectorAll(".teams-container");
+
+      users.forEach((user) => {
+        user.addEventListener("click", () => {
+          //remove 'active class'//
+          users.forEach((u) => u.classList.remove("active"));
+          teams.forEach((t) => t.classList.remove("active"));
+
+          user.classList.add("active");
+          //add active class to th clicked  user//
+          const targetid = user.getAttribute("data-target");
+          document.getElementById(targetid).classList.add("active");
+        });
+      });
+
+      const filterbuttons = document.querySelectorAll(".filter-buttons button");
+      const cards = document.querySelectorAll(".job-card");
+
+      filterbuttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          //remove active//
+          filterbuttons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          const category = button.getAttribute("data-filter");
+
+          cards.forEach((card) => {
+            const category2 = card.getAttribute("data-filter");
+
+            if (category === "all" || category2 === category) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

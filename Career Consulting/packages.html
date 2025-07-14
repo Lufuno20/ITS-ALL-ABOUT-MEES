@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packages</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    :root {
+      --background: white;
+      --button: #c7a59d;
+      --footer: #a3b18a;
+      --header: #d3ac1e;
+      --padding: #38627c;
+      --text-main: darkslategray;
+      --text-paragrah: #023047;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      outline: none;
+      border: none;
+      text-decoration: none;
+    }
+
+    body {
+      background: var(--background);
+      max-width: 1500px;
+      font-family: "Poppins", sans-serif;
+      margin: 0 auto;
+    }
+
+    /*subscription*/
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      min-height: 80vh;
+      background: rgba(119, 136, 153, 0.315);
+    }
+    section > div {
+      background-color: var(--background);
+      width: 320px;
+      margin: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      position: relative;
+      border: 1px solid #f8f5dc;
+    }
+    section > div:hover {
+      box-shadow: 0px 1rem 2rem grey;
+    }
+    section > div::before {
+      content: "";
+      position: absolute;
+      bottom: 7rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      top: 9rem;
+      border: 2px solid var(--color, #bb9ab1);
+      transition: all 0.35s linear;
+      transform: rotateZ(3deg);
+      border-radius: 0.75rem;
+    }
+    section > div:hover::before {
+      transform: rotateZ(0deg);
+      bottom: -0.5rem;
+      top: -0.5rem;
+    }
+    section .overlay {
+      padding: 2rem 1rem;
+      border-radius: 5px;
+    }
+    section > div:hover .overlay {
+      color: var(--color, #663e5a);
+    }
+    section .title {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    section .price {
+      padding-top: 0.5rem;
+      text-transform: capitalize;
+    }
+    section .price strong {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    section ul {
+      padding: 2rem 3rem;
+      text-align: left;
+    }
+    section ul li {
+      padding: 0.5rem;
+      list-style: disc;
+      color: #663e5a;
+      text-transform: capitalize;
+    }
+    section > div:hover ul li {
+      color: #815775;
+    }
+
+    section .action {
+      padding-block: 2rem;
+    }
+    section .action .start-btn {
+      padding: 0.75rem 0.5rem;
+      border: none;
+      font-size: 17px;
+      background: var(--button);
+      color: black;
+      border-radius: 5px;
+      width: 50%;
+      margin: 0 auto;
+      text-transform: capitalize;
+      position: relative;
+    }
+    section .action .start-btn::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      border: 2px solid var(--color, #663e5a);
+      border-radius: 0.5rem;
+      transition: all 0.35s linear;
+      opacity: 0;
+    }
+    section .action .start-btn:hover::before {
+      top: -0.25rem;
+      bottom: -0.25rem;
+      left: -0.25rem;
+      right: -0.25rem;
+      opacity: 1;
+    }
+    section .action .start-btn:hover {
+      background: var(--color, #663e5a);
+      cursor: pointer;
+    }
+    section .premium {
+      --color: var(--text-main);
+    }
+    section .allAccess {
+      --color: var(--header);
+    }
+    section .add-ons {
+      --color: var(--text-main);
+    }
+    section .Bootcamp {
+      --color: var(--footer);
+    }
+    /*subscription*/
+
+    /*footer*/
+    .footer {
+      margin-top: 20%;
+      margin: 10px;
+      padding: 20px;
+      max-height: fit-content;
+      background: var(--footer);
+    }
+    .footer > * {
+      flex: 1 100%;
+    }
+    .footer p {
+      font-size: 20px;
+    }
+    .footer-left {
+      margin-right: 1.25em;
+      margin-bottom: 2em;
+    }
+    .footer-left img {
+      width: 200px;
+      mix-blend-mode: multiply;
+    }
+    .footer h2 {
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .footer ul {
+      padding-left: 0;
+    }
+    .footer li {
+      line-height: 2em;
+    }
+    .footer-right {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .footer-right > * {
+      flex: 1 50%;
+      margin-right: 1.25em;
+    }
+    .box1 a {
+      color: var(--text-main);
+    }
+    .footer-bottom {
+      text-align: center;
+      color: var(--text-paragrah);
+      padding-top: 50px;
+    }
+    .footer-left p {
+      padding-right: 20%;
+      color: var(--text-paragrah);
+    }
+    .socials a {
+      background: var(--padding);
+      width: 50px;
+      height: 50px;
+      margin-top: 20px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .socials a i {
+      color: var(--footer);
+      padding: 10px 12px;
+      font-size: 30px;
+    }
+
+    /*footer*/
+
+    /*----responsive------*/
+    @media screen and (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 600px) {
+      .slide {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer {
+        padding: 15px;
+      }
+    }
+    @media screen and (min-width: 600px) {
+      .footer-right > * {
+        flex: 1;
+      }
+      .footer-left {
+        flex: 1 0px;
+      }
+      .footer-right {
+        flex: 2 0px;
+      }
+    }
+    /*----responsive------*/
+  </style>
+
+  <body>
+    <!--subscription section-->
+    <section>
+      <!--copy the others-->
+      <div class="basic">
+        <div class="overlay">
+          <div class="title">Basic</div>
+          <div class="price"><strong>R150</strong>per month</div>
+        </div>
+        <ul>
+          <li>1-hour session</li>
+          <li>basic personality test</li>
+          <li>resume review and feedback</li>
+        </ul>
+        <div class="action">
+          <div class="start-btn">Get started</div>
+        </div>
+      </div>
+
+      <div class="premium">
+        <div class="overlay">
+          <div class="title">Premium</div>
+          <div class="price"><strong>R250</strong>per month</div>
+        </div>
+        <ul>
+          <li>3-hour session</li>
+          <li>Full career assessment</li>
+          <li>resume rewrite and LinkedIn profile.</li>
+          <li>interview preparation</li>
+          <li>job searching strategy and goal setting.</li>
+        </ul>
+        <div class="action">
+          <div class="start-btn">Get started</div>
+        </div>
+      </div>
+
+      <div class="allAccess">
+        <div class="overlay">
+          <div class="title">All Access</div>
+          <div class="price"><strong>R250</strong>per month</div>
+        </div>
+        <ul>
+          <li>unlimted sessions</li>
+          <li>extensive career assessment</li>
+          <li>advance interview training</li>
+          <li>ongoing support with job offers</li>
+        </ul>
+        <div class="action">
+          <div class="start-btn">Get started</div>
+        </div>
+      </div>
+
+      <div class="Bootcamp">
+        <div class="overlay">
+          <div class="title">Bootcamp</div>
+          <div class="price"><strong>R400</strong>per month</div>
+        </div>
+        <ul>
+          <li>4 weeks bootcamp sessions</li>
+          <li>full career assistance</li>
+          <li>interview coaching</li>
+          <li>personalised job search & strategy</li>
+        </ul>
+        <div class="action">
+          <div class="start-btn">Get started</div>
+        </div>
+      </div>
+
+      <div class="add-ons">
+        <div class="overlay">
+          <div class="title">Add-ons (For all packages)</div>
+          <div class="price"><strong>R100</strong>per item-list</div>
+        </div>
+        <ul>
+          <li>resume and overletter</li>
+          <li>mock interview sessions</li>
+          <li>personalized job search</li>
+        </ul>
+        <div class="action">
+          <div class="start-btn">Get started</div>
+        </div>
+      </div>
+    </section>
+    <!--subscription end section-->
+
+  
+  </body>
+</html>
