@@ -13,6 +13,14 @@
   --pink: darksalmon;
   --backdrop-filter-blur: blue(5px);
 }
+p{
+  font-family: "Indie Flower", cursive;
+  font-weight: 500;
+}
+h1,h2,h3,h4{
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+}
 .hidden {
   display: none !important;
 }
